@@ -1,0 +1,612 @@
+
+/* ================================
+   GENERAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+
+/* ================================
+   NAVBAR
+================================ */
+
+header {
+    width: 100%;
+    background-color: #000000;
+    border-bottom: 1px solid #252525;
+}
+
+nav {
+    max-width: 1166px;
+    height: 70px;
+    margin: auto;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo h2 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #d0d0d0;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #8547ff;
+}
+
+.nav-button {
+    padding: 12px 25px;
+    border-radius: 30px;
+
+    background: linear-gradient(90deg, #4930ff, #9144ff);
+
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* ================================
+   HERO SECTION
+================================ */
+
+.hero {
+    max-width: 1166px;
+    min-height: 350px;
+    margin: auto;
+    padding: 40px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.subtitle {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 8px 16px;
+
+    background-color: #171717;
+    border: 1px solid #333333;
+    border-radius: 30px;
+
+    color: #cccccc;
+    font-size: 14px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    line-height: 1.15;
+}
+
+.hero-content h1 span {
+    display: block;
+
+    background: linear-gradient(90deg, #299cff, #a33cff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    font-size: 50px;
+}
+
+.description {
+    max-width: 480px;
+    margin-top: 15px;
+
+    color: #c5c5c5;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.hero-buttons a {
+    padding: 12px 25px;
+    border-radius: 30px;
+
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.hero-buttons a:first-child {
+    background: linear-gradient(90deg, #4930ff, #9144ff);
+}
+
+.hero-buttons a:last-child {
+    border: 1px solid #aaaaaa;
+    background-color: transparent;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+    border: 1.5px solid #cccccc;
+
+    object-fit: cover;
+}
+
+
+/* ================================
+   SKILLS SECTION
+================================ */
+
+.skills {
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+
+    background-color: transparent;
+    border:none;
+    border-radius: 0;
+}
+
+.skills h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    font-size: 30px;
+}
+
+.skills h2::before,
+.skills h2::after {
+    content: "";
+    width: 65px;
+    height: 2px;
+    background-color: #cccccc;
+}
+
+.skills > p {
+    margin-top: 5px;
+    color: #bdbdbd;
+    font-size: 17px;
+}
+
+.skills-container {
+    max-width: 950px;
+    margin: 20px auto 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.skill-item {
+    width: 25%;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-right: 1px solid #343434;
+}
+
+.skill-item:last-child {
+    border-right: none;
+}
+
+.skill-item img {
+    max-width: 130px;
+    max-height: 75px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* ================================
+   CONTACT SECTION
+================================ */
+
+.contact {
+    width: 100%;
+    margin-top: 70px;
+    padding: 25px max(calc((100% - 1166px) / 2), 20px);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+
+    background-color: transparent;
+    border: none;
+    border-radius:0;
+}
+
+.contact-information {
+    flex: 1;
+}
+
+.contact-information h2 {
+    position: relative;
+    margin-bottom: 8px;
+    padding-top: 12px;
+
+    font-size: 32px;
+}
+
+.contact-information h2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 65px;
+    height: 2px;
+    background-color: #cccccc;
+}
+
+.contact-information > p {
+    color: #c5c5c5;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.contact-details {
+    display: flex;
+    gap: 25px;
+    margin-top: 22px;
+}
+
+.contact-details p {
+    color: #dddddd;
+    font-size: 14px;
+}
+
+.social-links {
+    display: flex;
+    gap: 22px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #8547ff;
+}
+
+
+/* ================================
+   CONTACT FORM
+================================ */
+
+.contact-form {
+    flex: 1;
+    padding: 8px;
+    border-radius: 18px;
+
+    background-color:transparent;
+    border: none;
+}
+
+.form-group {
+    display: flex;
+    gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+
+    border: 1px solid #333333;
+    border-radius: 15px;
+    outline: none;
+
+    background-color: #202020;
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #743cff;
+}
+
+.contact-form textarea {
+    height: 55px;
+    margin-top: 8px;
+    resize: none;
+}
+
+.contact-form button {
+    width: 100%;
+    margin-top: 8px;
+    padding: 11px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: linear-gradient(90deg, #4930ff, #9144ff);
+
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#contact-status {
+    margin: 8px 5px 0;
+    font-size: 13px;
+    color: #bba2ff;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    max-width: 1166px;
+    margin: 30px auto 0;
+    padding: 20px;
+
+    text-align: center;
+}
+
+footer p {
+    color: #aaaaaa;
+    font-size: 13px;
+}
+
+
+/* Mouse Effect */
+
+body {
+    position: relative;
+    isolation: isolate;
+    background-color: #000000;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+    z-index: 0;
+
+    background: radial-gradient(
+        500px circle at var(--mouse-x, -1000px) var(--mouse-y, -1000px),
+        rgba(112, 65, 255, 0.20),
+        rgba(40, 100, 255, 0.08) 40%,
+        transparent 80%
+    );
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Menjaga konten tetap berada di atas efek cahaya */
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Efek cahaya aktif setelah mouse bergerak */
+body.mouse-active::before {
+    opacity: 1;
+}
+
+
+
+/* ================================
+   ENTRANCE ANIMATION
+================================ */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animasi khusus navbar */
+header {
+    animation: fadeDown 0.8s ease forwards;
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mengurangi animasi jika pengguna memilih gerakan minimal */
+@media (prefers-reduced-motion: reduce) {
+    .reveal,
+    header {
+        animation: none;
+        transition: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+    nav {
+        height: auto;
+        min-height: 70px;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        gap: 18px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 35px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content h1 span {
+        font-size: 48px;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image img {
+        width: 210px;
+        height: 210px;
+    }
+
+    .skills-container {
+        flex-wrap: wrap;
+    }
+
+    .skill-item {
+        width: 20%;
+        margin: 10px 0;
+    }
+
+    .skill-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 25px 20px;
+    }
+
+    .contact-details {
+        flex-wrap: wrap;
+    }
+
+    .form-group {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+
+    nav ul {
+        gap: 12px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    .logo h2 {
+        font-size: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-content h1 span {
+        font-size: 40px;
+    }
+
+    .hero-buttons a {
+        padding: 11px 17px;
+        font-size: 12px;
+    }
+
+    .skills h2 {
+        font-size: 25px;
+        gap: 12px;
+    }
+
+    .skills h2::before,
+    .skills h2::after {
+        width: 35px;
+    }
+}
